@@ -10,6 +10,6 @@ import reactor.core.publisher.Mono;
 
 @HttpExchange("/api/v1/dmsauthentication")
 public interface DMSAuthenticationClient {
-	@GetExchange( value = "/userDMSAuth/{id}/{password}/{userType}")
-    Mono<UserAuthenticationResponse> getUser(@PathVariable("id") String userId,@PathVariable("password") String password,@PathVariable("userType") String userType);
+	@GetExchange( value = "/userDMSAuth/{userId}/{password}/{userType}")
+    Mono<UserAuthenticationResponse> getUser(@PathVariable("userId") String userId,@PathVariable("password") String password,@PathVariable("userType") String userType);
 }
